@@ -6,11 +6,11 @@ public class Main {
   public static void main(String[] args) {
      java.util.Scanner keyboard = new java.util.Scanner(System.in);
      java.util.Random rand = new java.util.Random();
-    
+
     //greet the user
     System.out.println("Hello! Would you like to play rock, paper, scissors?");
     System.out.println("Type 1 for yes, 2 for no.");
-    
+
 
     //get input from user
     int userchoice = keyboard.nextInt();
@@ -22,11 +22,11 @@ public class Main {
     }
     while(userchoice== 1){
       System.out.println("Choose! Type 0 for Rock, 1 for Paper, 2 for Scissors");
-    
+
       int usermove = keyboard.nextInt();
       int computermove = rand.nextInt(3);
 
-      
+
       //game logic and win tracking
     if(usermove == 0  && computermove == 1){
       System.out.println("Computer wins!");
@@ -40,8 +40,8 @@ public class Main {
     } else if(usermove == computermove){
       System.out.println("It's a tie!");
     } else {
-      System.out.println("Player wins!");
-      playerwins = playerwins +1; 
+      System.out.println("Invalid Input, Try Again!");
+      playerwins = playerwins +0; 
     }
       System.out.println("Player Wins:" + playerwins);
       System.out.println("Computer Wins:" + computerwins);
@@ -51,11 +51,15 @@ public class Main {
       userchoice = keyboard.nextInt();
       if(userchoice == 2){
         System.out.println("Thanks for playing!");
-        keyboard.close(); 
+        keyboard.close();
+      } else if(userchoice == 1){
+        System.out.println("Let's play again!");
       }
+      }
+      }
+    
     }
-    }
-  }
+  
 
     
   
